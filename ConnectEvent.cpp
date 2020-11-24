@@ -12,7 +12,7 @@ ConnectEvent::~ConnectEvent()
 
 void ConnectEvent::setWindow(QQuickWindow* Window)
 {
-   // mMainView = Window;//connection을 해주기 위해 윈도우를 등록
+    mMainView = Window;//connection을 해주기 위해 윈도우를 등록
 }
 
 void ConnectEvent::cppStringTestMethod(QString stringData)//qml 소스코드에서 클래스를 등록해서 클래스의 함수를 직접 호출하는 함수
