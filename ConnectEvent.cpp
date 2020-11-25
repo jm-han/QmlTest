@@ -25,3 +25,9 @@ void ConnectEvent::cppStringTestMethod(QString stringData)//qml 소스코드에�
     }
 
 }
+
+// text 입력함수
+QString ConnectEvent::setText(QString Value)
+{
+    return Value;
+}

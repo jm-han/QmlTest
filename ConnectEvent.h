@@ -15,6 +15,7 @@ public:
     ~ConnectEvent();
 
     void setWindow(QQuickWindow* Window);
+    Q_INVOKABLE QString setText(QString Value);
     Q_INVOKABLE void cppStringTestMethod(QString stringData);//함수앞에 Q_INVOKABLE를 선언해서 qml에서 직접 호출이 가능한 함수를 만들어 준다.
 private:
 

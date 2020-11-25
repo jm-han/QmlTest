@@ -1,3 +1,4 @@
+// test git
 import QtQuick 2.9
 import QtQuick.Controls 2.0
 import QtQuick.Window 2.2
@@ -26,19 +27,26 @@ Window {
 
     StackView
     {
+
         id:stackView
         anchors.fill: parent
 
 
         initialItem: Item  //제일 첫화면을 설정하는 것으로 설정을 안하면 되돌아오기가 안된다.
         {
+
             objectName: "mainscreen"//이전화면에 대한 정보를 얻기위해 설정하는 값
             Rectangle//배경 색을 지정하는 부분
             {
                 anchors.fill: parent
                 color:"red"
             }
-
+            Text {
+                id: t1
+                text: qsTr("text")
+                x:150
+                y:150
+            }
             Button
             {
                 id:strButton //string형 데이터를 매개변수에 넣어서 cpp함수를 호출하는 버튼
@@ -47,7 +55,8 @@ Window {
                 onClicked:
                 {
                     console.log("qml signal strButton click")
-                    connectEvent.cppStringTestMethod("qml register class method"); //등록한 클래스의 함수를 호출 하는 방법
+                 //   connectEvent.cppStringTestMethod("qml register class method"); //등록한 클래스의 함수를 호출 하는 방법
+                    t1.text=connectEvent.setText("TEST");  // 함수에 출력
                 }
             }
         }
